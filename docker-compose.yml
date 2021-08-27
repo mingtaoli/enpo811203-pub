@@ -1,0 +1,18 @@
+version: "3"
+services:
+  datascience-notebook:
+    image: ai4energy/myplutobinder
+    container_name: myplutobinder    
+    command: "start-notebook.sh"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - NB_UMASK=022
+      - NB_USER=ai4energy
+      - NB_UID=1008
+      - NB_GID=1008
+      - CHOWN_HOME=yes
+      - CHOWN_HOME_OPTS=-R
+    ports:
+      - 8888:8888
+    volumes:
+      - ./notebook:/home/ai4energy/work
