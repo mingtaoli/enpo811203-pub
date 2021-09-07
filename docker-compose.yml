@@ -15,4 +15,4 @@ services:
     ports:
       - 8888:8888
     volumes:
-      - ./notebook:/home/ai4energy/work
+      - ./notebooks:/home/ai4energy/work
